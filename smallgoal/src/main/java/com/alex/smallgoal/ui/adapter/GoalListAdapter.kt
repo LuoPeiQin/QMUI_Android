@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.alex.smallgoal.R
-import com.alex.smallgoal.bean.TargetItem
+import com.alex.smallgoal.bean.GoalItem
 
-class TargetAdapter(private val items: List<TargetItem>) :
-  RecyclerView.Adapter<TargetAdapter.ViewHolder>() {
+class GoalListAdapter(private val items: List<GoalItem>) :
+  RecyclerView.Adapter<GoalListAdapter.ViewHolder>() {
 
   inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val tvTitle: TextView = view.findViewById(R.id.tvTitle)
@@ -17,11 +17,11 @@ class TargetAdapter(private val items: List<TargetItem>) :
     private val tvProgressValue: TextView = view.findViewById(R.id.tvProgressValue)
     private val tvCurrentCount: TextView = view.findViewById(R.id.tvCurrentCount)
 
-    fun bind(item: TargetItem) {
+    fun bind(item: GoalItem) {
       tvTitle.text = item.title
       tvTargetValue.text = item.target.toString()
       tvCurrentCount.text = "${item.curValue}"
-      tvProgressValue.text = "${((item.curValue / item.target.toFloat()) * 100).toInt()}"
+      tvProgressValue.text = "${((item.curValue / item.target.toFloat()) * 100).toInt()} %"
     }
   }
 

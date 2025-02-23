@@ -58,6 +58,10 @@ dependencies {
   implementation(project(":editor"))
   implementation(Dep.Flipper.soLoader)
   implementation(Dep.Flipper.flipper)
+  implementation("com.blankj:utilcodex:1.31.1")
+  implementation("com.tencent:mmkv:1.3.11")
+  implementation("com.google.code.gson:gson:2.9.0")
+
   kapt(project(":compiler"))
   kapt(project(":arch-compiler"))
   kapt(Dep.Glide.compiler)

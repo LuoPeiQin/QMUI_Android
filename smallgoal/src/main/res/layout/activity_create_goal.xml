@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <com.qmuiteam.qmui.widget.QMUITopBarLayout
+    android:id="@+id/topbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="目标"
+      android:textSize="20dp" />
+
+    <EditText
+      android:id="@+id/etGoalTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="4dp"
+      android:background="@drawable/qmui_divider_bottom_bitmap"
+      android:hint="请输入目标"
+      android:paddingBottom="6dp"
+      android:singleLine="true"
+      android:textColor="@color/app_color_description"
+      android:textSize="16sp" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="目标数量"
+      android:textSize="20dp" />
+
+    <EditText
+      android:id="@+id/etGoalNumber"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="4dp"
+      android:background="@drawable/qmui_divider_bottom_bitmap"
+      android:hint="请输入目标"
+      android:paddingBottom="6dp"
+      android:singleLine="true"
+      android:textColor="@color/app_color_description"
+      android:textSize="16sp" />
+
+    <View
+      android:layout_width="wrap_content"
+      android:layout_height="0dp"
+      android:layout_weight="1" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+      android:id="@+id/btnAddGoal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginBottom="60dp"
+      android:paddingLeft="16dp"
+      android:paddingTop="10dp"
+      android:paddingRight="16dp"
+      android:paddingBottom="10dp"
+      android:text="添加目标"
+      app:qmui_isRadiusAdjustBounds="true" />
+  </LinearLayout>
+
+</LinearLayout>
