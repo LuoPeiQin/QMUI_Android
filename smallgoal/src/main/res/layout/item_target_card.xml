@@ -1,0 +1,97 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginHorizontal="16dp"
+  android:layout_marginTop="8dp"
+  android:background="@drawable/bg_blue_corner">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+      <!-- 标题 -->
+      <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        tools:text="目标" />
+
+      <!-- 目标数量 -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="目标: "
+          android:textColor="#666666"
+          android:textSize="14sp" />
+
+        <TextView
+          android:id="@+id/tvTargetValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:textColor="#333333"
+          android:textSize="14sp"
+          tools:text="10000" />
+      </LinearLayout>
+
+      <!-- 进度 -->
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="进度: "
+          android:textColor="#666666"
+          android:textSize="14sp" />
+
+        <TextView
+          android:id="@+id/tvProgressValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:textColor="#333333"
+          android:textSize="14sp"
+          tools:text="100" />
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:gravity="center">
+
+      <TextView
+        android:id="@+id/tvCurrentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="#2196F3"
+        android:textSize="28dp"
+        tools:text="9527" />
+    </LinearLayout>
+
+  </LinearLayout>
+</LinearLayout>
