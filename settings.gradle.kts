@@ -22,3 +22,4 @@ include(":photo-glide")
 include(":editor")
 
 
+include(":smallgoal")
