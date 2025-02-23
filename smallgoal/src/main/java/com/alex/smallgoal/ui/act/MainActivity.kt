@@ -78,6 +78,17 @@ class MainActivity : AppCompatActivity() {
       layoutManager = LinearLayoutManager(context)
       adapter = mAdapter
     }
+
+    mAdapter.itemListener = object : GoalListAdapter.ItemListener {
+      override fun onItemClick(position: Int) {
+        if (position >= items.size) {
+          Log.d(TAG, "onItemClick: position = $position item.size = ${items.size}")
+          return
+        }
+        val item = items[position]
+        UpdateCompletedValueActivity.startActivity(this@MainActivity, item.id)
+      }
+    }
   }
 
   private fun initTopBar() {

@@ -2,6 +2,7 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical">
@@ -21,40 +22,81 @@
     <TextView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="目标"
+      android:text="目标名称"
       android:textSize="20dp" />
 
-    <EditText
-      android:id="@+id/etGoalTitle"
+    <TextView
+      android:id="@+id/tvGoalTitle"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
       android:layout_marginTop="4dp"
       android:background="@drawable/qmui_divider_bottom_bitmap"
-      android:hint="请输入目标"
       android:paddingBottom="6dp"
       android:singleLine="true"
       android:textColor="@color/app_color_blue"
-      android:textSize="16sp" />
+      android:textSize="16sp"
+      tools:text="运动100天" />
 
     <TextView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:text="目标数量"
+      android:text="目标"
       android:textSize="20dp" />
 
-    <EditText
-      android:id="@+id/etGoalNumber"
+    <TextView
+      android:id="@+id/tvGoalNumber"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
       android:layout_marginTop="4dp"
       android:background="@drawable/qmui_divider_bottom_bitmap"
-      android:hint="请输入目标"
       android:paddingBottom="6dp"
       android:singleLine="true"
       android:textColor="@color/app_color_blue"
+      android:textSize="16sp"
+      tools:text="10000" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="已完成数量"
+      android:textSize="20dp" />
+
+    <TextView
+      android:id="@+id/tvCompletedValue"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="4dp"
+      android:background="@drawable/qmui_divider_bottom_bitmap"
+      android:paddingBottom="6dp"
+      android:singleLine="true"
+      android:textColor="@color/app_color_blue"
+      android:textSize="16sp"
+      tools:text="8000" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="本次完成数量"
+      android:textSize="20dp" />
+
+    <EditText
+      android:id="@+id/etCompletedThisTimeCount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="4dp"
+      android:background="@drawable/qmui_divider_bottom_bitmap"
+      android:hint="请输入本次完成数量"
+      android:paddingBottom="6dp"
+      android:singleLine="true"
+      tools:text="300"
+      android:textColor="@color/app_color_theme_5"
       android:textSize="16sp" />
 
     <View
@@ -63,7 +105,7 @@
       android:layout_weight="1" />
 
     <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
-      android:id="@+id/btnAddGoal"
+      android:id="@+id/btnUpdateGoal"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
@@ -72,7 +114,7 @@
       android:paddingTop="10dp"
       android:paddingRight="16dp"
       android:paddingBottom="10dp"
-      android:text="添加目标"
+      android:text="更新完成进度"
       app:qmui_isRadiusAdjustBounds="true" />
   </LinearLayout>
 

@@ -11,6 +11,8 @@ import com.alex.smallgoal.bean.GoalItem
 class GoalListAdapter(private val items: List<GoalItem>) :
   RecyclerView.Adapter<GoalListAdapter.ViewHolder>() {
 
+  var itemListener: ItemListener? = null
+
   inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val tvTitle: TextView = view.findViewById(R.id.tvTitle)
     private val tvTargetValue: TextView = view.findViewById(R.id.tvTargetValue)
@@ -20,15 +22,19 @@ class GoalListAdapter(private val items: List<GoalItem>) :
     fun bind(item: GoalItem) {
       tvTitle.text = item.title
       tvTargetValue.text = item.target.toString()
-      tvCurrentCount.text = "${item.curValue}"
-      tvProgressValue.text = "${((item.curValue / item.target.toFloat()) * 100).toInt()} %"
+      tvCurrentCount.text = "${item.completedValue}"
+      tvProgressValue.text = "${((item.completedValue / item.target.toFloat()) * 100).toInt()} %"
     }
   }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
     val view = LayoutInflater.from(parent.context)
       .inflate(R.layout.item_target_card, parent, false)
-    return ViewHolder(view)
+    val viewHolder = ViewHolder(view)
+    view.setOnClickListener {
+      itemListener?.onItemClick(viewHolder.adapterPosition)
+    }
+    return viewHolder
   }
 
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -36,4 +42,8 @@ class GoalListAdapter(private val items: List<GoalItem>) :
   }
 
   override fun getItemCount() = items.size
+
+  interface ItemListener {
+    fun onItemClick(position: Int)
+  }
 }

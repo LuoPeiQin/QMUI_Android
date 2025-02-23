@@ -2,6 +2,7 @@ import com.qmuiteam.plugin.Dep
 
 plugins {
   id("com.android.application")
+  id("kotlin-parcelize")
   kotlin("android")
   kotlin("kapt")
 }
